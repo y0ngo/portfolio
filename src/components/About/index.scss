@@ -1,0 +1,72 @@
+.about-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #000; // fallback background
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+
+  h1 {
+    font-family: 'La Belle Aurore', cursive; // replace with your handwritten font if available
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: 'La Belle Aurore', cursive; // replace with handwriting font
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #fff;
+  }
+
+  /* Snippets grid */
+  .portfolio-snippets {
+    margin-top: 60px;
+
+    .snippets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+
+      .snippet {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        video {
+          width: 50%;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .portfolio-snippets .snippets-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}

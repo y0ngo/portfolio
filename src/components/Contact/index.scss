@@ -1,0 +1,136 @@
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+    
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            clear: both;
+        }
+        li.half {
+            width: 48%;
+            float: left;
+            margin-left: 2%;
+            clear: none;
+
+            &:first-child {
+                margin-left: 0; /* Fix alignment issue */
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        border: 0;
+        height: 50px;
+      
+        font-size: 16px;
+        color: #444;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        width: 100%;
+        height: 50px;
+        border: 0;
+        font-size: 16px;
+        color: #444;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 150px;
+        resize: none;
+    }
+
+    .flat-button {
+        color: #ffd700;
+        background: transparent;
+        font: 11px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid #ffd700;
+        float: right;
+        border-radius: 4px;
+    }
+}
+
+.social-links {
+    margin-top: 20px;
+
+    p {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .social-button {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #fff;
+        transition: background-color 0.3s ease;
+
+        &.instagram {
+            background-color: #E1306C;
+        }
+
+        &.tiktok {
+            background-color: #000;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.container.contact-page {
+    min-height: 100vh; /* Ensure the page fills the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    h1 {
+    color: #fff;
+    font-size: 53px;
+    margin: 0;
+    font-family: 'La Belle Aurore', cursive;
+    font-weight: 400;
+    
+
+  
+
+ 
+  }
+ /* Center content horizontally */
+}
+p{
+    font-family: 'La Belle Aurore', cursive; // replace with handwriting font
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #fff;
+}
+
+.text-zone {
+    width: 100%;
+    max-width: 800px; /* Limit the width for better alignment */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
