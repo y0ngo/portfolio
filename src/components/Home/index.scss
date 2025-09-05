@@ -1,7 +1,6 @@
 .home-page {
   margin-left: 60px; // matches sidebar width
-  min-height: 100vh; // Ensure the page takes at least the full viewport height
-  // Enable vertical scrolling if content exceeds viewport
+  min-height: 100vh;
 
   .text-zone {
     position: absolute;
@@ -13,7 +12,6 @@
   }
 
   .hero {
-    
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -30,10 +28,6 @@
     margin: 0;
     font-family: 'La Belle Aurore', cursive;
     font-weight: 400;
-
-  
-
- 
   }
 
   .text-zone h2 {
@@ -70,32 +64,35 @@
   }
 
   /* Portfolio Grid */
-  .portfolio-snippets {
-    width: 90%;
-     margin: 100px auto; // Increase the top margin to push it down
-    padding-top: 350px;
-    text-align: center;
+.portfolio-snippets {
+  width: 90%;
+  margin: 100px auto;
+  padding-top: 150px; // reduced to not push grid too far
+  text-align: center;
 
-    h2 {
-      font-family: 'La Belle Aurore', cursive;
-      font-size: 48px;
-      color: #fff;
-      margin-bottom: 40px;
-      position: relative;
+  h2 {
+    margin-top: 400px; // extra breathing space from nav
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
 
-      &::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 4px;
-        background: #ffd700;
-        margin: 15px auto 0;
-      }
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #ffd700;
+      margin: 15px auto 0;
     }
+  }
+
+
 
     .snippets-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); // Two columns for larger screens
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
 
       .snippet {
@@ -111,7 +108,7 @@
 
         video {
           width: 100%;
-          height: 350px; // Reduce the height of the videos
+          height: 350px;
           object-fit: cover;
           border-radius: 10px;
         }
@@ -132,29 +129,73 @@
     }
   }
 
+  /* ------------------ Responsive / Phone Settings ------------------ */
   @media (max-width: 768px) {
+    margin-left: 0; // remove sidebar spacing
+    padding: 1rem;
+
     .hero {
+      height: auto;
       text-align: center;
-      .text-zone {
-        width: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      padding: 60px 1rem;
+    }
+
+    .text-zone {
+      position: relative;
+      width: 90%;
+      left: auto;
+      top: auto;
+      transform: none;
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        font-size: 32px;
       }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    .flat-button {
+      font-size: 12px;
+      padding: 8px 16px;
+      margin-top: 20px;
     }
 
     .portfolio-snippets {
       width: 95%;
+      padding-top: 200px;
+      margin-top: 60px;
 
       .snippets-grid {
-        grid-template-columns: 1fr; // Single column for smaller screens
+        grid-template-columns: 1fr; // single column for mobile
         gap: 20px;
 
-        .snippet {
-          img {
-            height: 180px;
-          }
+        .snippet video {
+          height: 200px;
+        }
+
+        .snippet h3 {
+          font-size: 18px;
+          padding: 6px 10px;
         }
       }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .portfolio-snippets .snippets-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .portfolio-snippets .snippets-grid {
+      grid-template-columns: repeat(2, 1fr); // desktop two-column
+      gap: 30px;
     }
   }
 }

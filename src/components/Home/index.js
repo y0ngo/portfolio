@@ -19,11 +19,11 @@ const Home = () => {
           {/* Add your navigation links here */}
         </nav>
         <div className="hero-content">
-          <h1>Hi,<br />my name is Owen and I'm a videographer.</h1>
+       
           <h2>
             <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={22} />
           </h2>
-          <Link to="/contact" className="flat-button">CONTACT ME</Link>
+        
         </div>
         <section className="portfolio-snippets">
           <h2>Portfolio Snippets</h2>
